@@ -107,16 +107,20 @@ class SceneState extends State<Scene> with SingleTickerProviderStateMixin {
       duration: Duration(milliseconds: 1500),
       curve: Curves.easeOut,
       color: _bgColor,
-      child: ClipRect(
-        child: Stack(
-          children: <Widget>[
-            _buildBgBlurFx(),
-            _buildClockFace(),
-            CustomPaint(
-              painter: ClockFxPainter(fx: _fx),
-              child: Container(),
-            ),
-          ],
+      child: Container(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        child: ClipRect(
+          child: Stack(
+            children: <Widget>[
+              _buildBgBlurFx(),
+              _buildClockFace(),
+              CustomPaint(
+                painter: ClockFxPainter(fx: _fx),
+                child: Container(),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -134,7 +138,7 @@ class SceneState extends State<Scene> with SingleTickerProviderStateMixin {
           ),
           BackdropFilter(
             filter: ImageFilter.blur(
-              sigmaX: widget.size.width * .05,
+              sigmaX: widget.size.width * .10,
               sigmaY: 0,
             ),
             // filter: ImageFilter.blur(sigmaX: 0, sigmaY: 0),
@@ -146,7 +150,7 @@ class SceneState extends State<Scene> with SingleTickerProviderStateMixin {
   }
 
   Widget _buildClockFace() {
-    var faceSize = widget.size.height * .85;
+    var faceSize = widget.size.height * .45;
     return Center(
       child: Container(
         width: faceSize,

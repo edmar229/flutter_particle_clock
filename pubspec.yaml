@@ -4,15 +4,16 @@ description: Mickel's entry for the Flutter Clock challenge.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.2.2 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  flutter_clock_helper:
-    git:
-      url: git://github.com/flutter/flutter_clock.git
-      path: flutter_clock_helper
+  intl: "^0.16.0"
+  # flutter_clock_helper:
+  #   git:
+  #     url: git://github.com/edmar229/flutter_clock.git
+  #     path: flutter_clock_helper
 
 dev_dependencies:
   flutter_test:

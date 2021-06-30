@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:flutter_clock_helper/customizer.dart';
-import 'package:flutter_clock_helper/model.dart';
+import './ClockHelper/customizer.dart';
+import './ClockHelper/model.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 

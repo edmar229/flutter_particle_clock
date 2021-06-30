@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:flutter_clock_helper/model.dart';
+import './ClockHelper/model.dart';
 import 'package:flutter/material.dart';
 
 import 'palette.dart';
